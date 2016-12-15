@@ -1,0 +1,33 @@
+{
+  "name": "extension-link-enabler",
+  "version": "1.0.0",
+  "description": "Enable links on your browser plugin, today!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zanibas/Extension-Link-Enabler.git"
+  },
+  "keywords": [
+    "links",
+    "browser",
+    "plugin",
+    "extension",
+    "chrome",
+    "firefox",
+    "internet",
+    "explorer",
+    "edge"
+  ],
+  "author": "Zanibas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Zanibas/Extension-Link-Enabler/issues"
+  },
+  "homepage": "https://github.com/Zanibas/Extension-Link-Enabler#readme",
+  "dependencies": {
+    "extensionizer": "^1.0.0"
+  }
+}
