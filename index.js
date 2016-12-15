@@ -21,4 +21,4 @@ function clickHandler (event) {
     const url = event.target.href
     extension.tabs.create({ url: url })
   }
-}, false)
+}
