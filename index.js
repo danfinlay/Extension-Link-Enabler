@@ -1,15 +1,24 @@
 const extension = require('extensionizer')
 
-module.exports = function () {
-  global.addEventListener('click', (e) => {
-    const event = global.e || e
-    if (event.target.tagName !== 'A') {
-      return
-    } else {
-      event.preventDefault()
-      const url = event.target.href
-      alert("we here.")
-      // extension.tabs.create({ url })
-    }
-  }, false)
+module.exports = {
+  setupListener: setupListener,
+  teardownListener: teardownListener,
 }
+
+function setupListener (targetElement) {
+  targetElement.addEventListener('click', clickHandler)
+}
+
+function teardownListener (targetElement) {
+  targetElement.removeEventListener('click', clickHandler)
+}
+
+function clickHandler (event) {
+  if (event.target.tagName.toUpperCase() !== 'A') {
+    return
+  } else if (event.target.href) {
+    event.preventDefault()
+    const url = event.target.href
+    extension.tabs.create({ url: url })
+  }
+}, false)
